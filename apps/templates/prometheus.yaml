@@ -2,12 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: prometheus
-  namespace: helm-test
+  namespace: default
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    server: https://kubernetes.helm-test.svc
+    server: https://kubernetes.default.svc
     namespace: helm-test
   project: default
   source:
